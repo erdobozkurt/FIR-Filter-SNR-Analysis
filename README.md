@@ -69,12 +69,13 @@ Bu projenin sonunda elde edilen en önemli mühendislik çıkarımları şunlard
 Aşağıda, projenin temel bulgularını destekleyen ve proje_ana_kod.m betiği tarafından otomatik olarak üretilen temel grafikler ve açıklamaları yer almaktadır.
 
 * **Grafik 1: Filtre Türü Performans Karşılaştırması**
-(graphs/filtre_turu_karsilastirmasi.png)
+`![Filtre Türü Karşılaştırması](./graphs/filtre_turu_karsilastirmasi.png)`
 **Ne Gösteriyor?** Bu grafik, pembe gürültü ve 0 dB başlangıç SNR'ı gibi zorlu bir senaryoda, üç farklı filtre türünün (LPF, HPF, BPF) filtre uzunluğu (N) arttıkça çıkış SNR'ını nasıl değiştirdiğini göstermektedir.
 **Ne Anlama Geliyor?** Grafikten de açıkça görüldüğü gibi, BPF'nin performansı N arttıkça hızla yükselerek 30 dB hedefine doğru ilerlerken, LPF ve HPF'nin performansı çok düşük seviyelerde kalmaktadır. Bu, projenin ana bulgularından birini görsel olarak kanıtlar: Sinyalin frekansı bilindiğinde, BPF diğer filtre türlerine göre ezici bir üstünlüğe sahiptir.
 
 * **Grafik 2: Gürültü Türü Performans Karşılaştırması**
-(graphs/gurultu_turu_karsilastirmasi.png)
+`![Gürültü Türü Karşılaştırması](graphs/gurultu_turu_karsilastirmasi.png)`
+
 **Ne Gösteriyor?** Bu grafik, en iyi filtremiz olan BPF'nin, farklı istatistiksel özelliklere sahip gürültü türlerine (beyaz, pembe, mavi) karşı performansını karşılaştırmaktadır.
 **Ne Anlama Geliyor?** BPF'nin pembe gürültüyü temizlemede en başarılı olduğu (SNR'ın en hızlı arttığı), beyaz ve mavi gürültüyü temizlemenin ise daha zorlu olduğu net bir şekilde görülmektedir. Bu, filtrenin başarısının sadece kendi yapısına değil, aynı zamanda karşılaştığı gürültünün spektral karakteristiğine de ne kadar bağlı olduğunu gösterir.
 
