@@ -69,25 +69,33 @@ Bu projenin sonunda elde edilen en önemli mühendislik çıkarımları şunlard
 Aşağıda, projenin temel bulgularını destekleyen ve proje_ana_kod.m betiği tarafından otomatik olarak üretilen temel grafikler ve açıklamaları yer almaktadır.
 
 * **Grafik 1: Filtre Türü Performans Karşılaştırması**
-`![Filtre Türü Karşılaştırması](./graphs/filtre_turu_karsilastirmasi.png)`
+![Filtre Türü Karşılaştırması](graphs/filtre_turu_karsilastirmasi.png)
+
 **Ne Gösteriyor?** Bu grafik, pembe gürültü ve 0 dB başlangıç SNR'ı gibi zorlu bir senaryoda, üç farklı filtre türünün (LPF, HPF, BPF) filtre uzunluğu (N) arttıkça çıkış SNR'ını nasıl değiştirdiğini göstermektedir.
+
 **Ne Anlama Geliyor?** Grafikten de açıkça görüldüğü gibi, BPF'nin performansı N arttıkça hızla yükselerek 30 dB hedefine doğru ilerlerken, LPF ve HPF'nin performansı çok düşük seviyelerde kalmaktadır. Bu, projenin ana bulgularından birini görsel olarak kanıtlar: Sinyalin frekansı bilindiğinde, BPF diğer filtre türlerine göre ezici bir üstünlüğe sahiptir.
 
 * **Grafik 2: Gürültü Türü Performans Karşılaştırması**
-`![Gürültü Türü Karşılaştırması](graphs/gurultu_turu_karsilastirmasi.png)`
+![Gürültü Türü Karşılaştırması](graphs/gurultu_turu_karsilastirmasi.png)
 
 **Ne Gösteriyor?** Bu grafik, en iyi filtremiz olan BPF'nin, farklı istatistiksel özelliklere sahip gürültü türlerine (beyaz, pembe, mavi) karşı performansını karşılaştırmaktadır.
+
 **Ne Anlama Geliyor?** BPF'nin pembe gürültüyü temizlemede en başarılı olduğu (SNR'ın en hızlı arttığı), beyaz ve mavi gürültüyü temizlemenin ise daha zorlu olduğu net bir şekilde görülmektedir. Bu, filtrenin başarısının sadece kendi yapısına değil, aynı zamanda karşılaştığı gürültünün spektral karakteristiğine de ne kadar bağlı olduğunu gösterir.
 
 * **Grafik 3: Frekans Yanıtı Analizi ("İyi" vs "Kötü" Filtre)**
-(graphs/iyi_vs_kotu_filtre_frekans_yaniti.png)
+!["İyi" vs "Kötü" Filtre](graphs/iyi_vs_kotu_filtre_frekans_yaniti.png)
+
 **Ne Gösteriyor?** Bu grafik, başarılı bir filtrenin (pembe gürültü için tasarlanmış BPF) frekans yanıtı ile başarısız bir filtrenin (mavi gürültü için tasarlanmış LPF) frekans yanıtını üst üste çizmektedir. Sinyalimizin bulunduğu 2917 Hz frekansı da işaretlenmiştir.
+
 **Ne Anlama Geliyor?** Bu, projedeki en önemli "Neden?" sorusunun cevabıdır. Mavi BPF, sadece sinyalin etrafındaki çok dar bir "geçit" bırakırken, kırmızı LPF sinyali kurtarmak uğruna gürültünün en güçlü olduğu devasa bir frekans bandını da içeri aldığını gösterir. Bu görsel, bir filtrenin başarısızlığının ardındaki temel fiziksel nedeni somut bir şekilde ortaya koyar.
 
 * **Grafik 4: Geçici ve Kalıcı Durum Yanıtı**
-(graphs/gecici_vs_kalici_durum_yaniti.png)
+![Geçici ve Kalıcı Durum Yanıtı](graphs/gecici_vs_kalici_durum_yaniti.png)
+
 **Ne Gösteriyor?** Bu grafik, tasarlanan bir FIR filtresine temiz bir sinüzoidal sinyal uygulandığında, çıkış sinyalinin zaman içindeki davranışını göstermektedir.
+
 **Ne Anlama Geliyor?** Grafiğin başında, çıkışın ilk N-1 örnek boyunca kararsız bir "Geçici Durum" (Transient Response) sergilediği açıkça görülmektedir. Bu sürenin sonunda filtre kararlı hale gelerek sinyali beklendiği gibi (genliği ve fazı değişmiş olarak) geçirmeye başlar. Bu, FIR filtrelerin doğası gereği sahip olduğu gecikmeyi ve kararlı duruma geçme süresini pratik olarak doğrular.
+
 ---
 
 ## 🎓 Ders Bilgileri
