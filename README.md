@@ -45,7 +45,7 @@ Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları i
 
 1.  **Depoyu Klonlayın:**
     ```bash
-    git clone [https://github.com/KULLANICI_ADINIZ/FIR-Filter-SNR-Analysis.git](https://github.com/KULLANICI_ADINIZ/FIR-Filter-SNR-Analysis.git)
+    git clone https://github.com/erdobozkurt/FIR-Filter-SNR-Analysis.git
     ```
 2.  **MATLAB'i Açın:** Klonladığınız klasörü MATLAB'de açın.
 3.  **Betiği Çalıştırın:** Tüm `.m` dosyalarının aynı klasörde olduğundan emin olun ve komut penceresine aşağıdaki komutu yazarak ana betiği çalıştırın:
